@@ -191,10 +191,7 @@ ProcessForm.prototype = function () {
                     .addClass('d-flex');
                 setTimeout(() => {
                     showForm(this);
-                }, 1000);
-                
-                
-                
+                }, 1000); 
             }
            
             return;
@@ -273,10 +270,7 @@ ProcessForm.prototype = function () {
             e.preventDefault();
             sendForm(_this);
         });
-        $(document).on('click', _this.settings.selector + ' .form-captcha__refresh', function (e) {
-            e.preventDefault();
-            _refreshCaptcha(_this);
-        });
+        
         
         // события для удаления добавленного к форме файла
         $(document).on('click', _this.settings.selector + ' .form-attachments__item-link', function () {
@@ -346,7 +340,23 @@ ProcessForm.prototype = function () {
 
 $(function () {
     let formFeedback = new ProcessForm({
+
     });
     formFeedback.init();
+
+    $("#file").fileinput({
+        theme: 'fas',
+        language: 'ru',
+        showUpload: false,
+        showCaption: false,
+        showBrowse: true,
+        showClose: false,
+        showCancel: false,
+        browseOnZoneClick: true,
+        fileType: "any",
+        previewFileIcon: "<i class='glyphicon glyphicon-king'></i>",
+        overwriteInitial: false,
+        initialPreviewAsData: true,
+    });
 });
 

@@ -4,6 +4,11 @@
 <head>
   <meta charset="utf-8">
   <title>Message form</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" crossorigin="anonymous">
+  <link href="uploader/css/theme.min.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="uploader/css/fileinput.min.css" media="all" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -22,16 +27,9 @@
           <div class="invalid-feedback"></div>
         </div>
 
-        <div class="form-group form-attachments" data-count="5">
-          <div class="form-attachments__wrapper">
-            <input class="form-attachments-input" type="file" name="attachment[]" multiple>
-            <div class="form-attachments__items">
-              <div class="form-attachments__description">
-                <div class="form-attachments__description-title">Нажмите чтобы добавить файлы к сообщению.</div>
-                <div>Можно добавить до 5 файлов с разрешением 'jpg', 'jpeg', 'pdf', 'doc', 'png' и размером до 512
-                  Кбайт.</div>
-              </div>
-            </div>
+        <div class="form-group form-attachments">
+          <div class="file-loading">
+            <input class="form-control" id="file" type="file" name="attachment[]" multiple>
           </div>
         </div>
 
@@ -62,8 +60,17 @@
 
   </div>
 
-  <script src="vendors/jquary/jquery-3.4.1.min.js"></script>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js"
+    crossorigin="anonymous"></script>
+  <script src="uploader/js/sortable.min.js"></script>
+  <script src="uploader/js/piexif.min.js"></script>
+  <script src="uploader/js/fileinput.min.js"></script>
+  <script src="uploader/js/ru.js"></script>
+  <script src="uploader/js/theme.min.js"></script>
   <script src="js/process-forms.js"></script>
+
 </body>
 
 </html>
